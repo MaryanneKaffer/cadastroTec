@@ -10,3 +10,8 @@
     --font-sans: "font", sans-serif;
     --font-mono: "monospace", monospace;
 }
+
+p,
+h1 {
+    cursor: default;
+}

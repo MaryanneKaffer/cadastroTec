@@ -3,24 +3,23 @@ import { Metadata, Viewport } from "next";
 
 import { Providers } from "./providers";
 
-import { siteConfig } from "@/config/site";
 import App from "./page";
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    default: "Cadastro cliente Tec Embalagens",
+    template: "%s - Cadastro cliente Tec Embalagens",
   },
-  description: siteConfig.description,
+  description: "Formulário de cadastro para clientes Tec Embalagens",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.png",
   },
 };
 
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },  ],
+    { media: "(prefers-color-scheme: dark)", color: "white" },],
 };
 
 export default function RootLayout({
