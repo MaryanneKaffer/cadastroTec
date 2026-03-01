@@ -3,8 +3,6 @@ import { Metadata, Viewport } from "next";
 
 import { Providers } from "./providers";
 
-import App from "./page";
-
 export const metadata: Metadata = {
   title: {
     default: "Cadastro cliente Tec Embalagens",
@@ -13,6 +11,20 @@ export const metadata: Metadata = {
   description: "Formulário de cadastro para clientes Tec Embalagens",
   icons: {
     icon: "/icon.png",
+  },
+  openGraph: {
+    title: "Cadastro cliente Tec Embalagens",
+    description: "Formulário de cadastro para clientes Tec Embalagens",
+    url: "https://cadastro-cliente-tec.vercel.app",
+    siteName: "Cadastro Tec",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
   },
 };
 
@@ -28,11 +40,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
-      <head />
+    <html suppressHydrationWarning lang="pt-BR">
       <body>
         <Providers themeProps={{ attribute: "class", defaultTheme: "white" }}>
-          <App />
+          {children}
         </Providers>
       </body>
     </html>
